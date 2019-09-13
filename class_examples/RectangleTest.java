@@ -35,6 +35,23 @@ class Rectangle {
     double perimeter = (height + width) * 2;
     return perimeter;
   }
+
+  public void setWidth(double w){
+    width = w;
+  }
+
+  void setHeight(String h){
+    double newHeight;
+    try {
+      int hInt = Integer.parseInt(h);
+      newHeight = hInt;
+      // won't work when input is has a decimal
+    } catch(Exception e) {
+      System.out.println("Error. Please don't use decimals in your height settings.");
+      newHeight = new Double(h);
+    }
+    height = newHeight;
+  }
 }
 
 /*
@@ -58,5 +75,8 @@ class RectangleTest {
     Rectangle rect2 = new Rectangle(3.5, 35.9);
     System.out.println("rectangle 2\t"+rect2.width+"\t"+rect2.height+"\t"+rect2.getArea()+"\t"+rect2.getPerimeter());
 
+    rect2.setWidth(101.5);
+    rect2.setHeight("1001.5");
+    System.out.println("rectangle 2'\t"+rect2.width+"\t"+rect2.height+"\t"+rect2.getArea()+"\t"+rect2.getPerimeter());
   }
 }
