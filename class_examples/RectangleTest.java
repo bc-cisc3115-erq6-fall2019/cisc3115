@@ -19,10 +19,10 @@ class Rectangle {
   }
 
   // A constructor that creates a rectangle with the specified width and height.
-  public Rectangle(double newWidth, double newHeight){
+  public Rectangle(double width, double height){
     // Create a rectangle with the specified width and height
-    width = newWidth;
-    height = newHeight;
+    this.width = width;
+    this.height = height;
   }
 
   // A method named getArea() that returns the area of this rectangle.
@@ -52,6 +52,12 @@ class Rectangle {
     }
     height = newHeight;
   }
+
+  void setEverything(double height, double width){
+    this.height = width;
+    this.width = height;
+  }
+
 }
 
 /*
@@ -77,6 +83,7 @@ class RectangleTest {
 
     rect2.setWidth(101.5);
     rect2.setHeight("1001.5");
+    rect2.setEverything(1,2);
     System.out.println("rectangle 2'\t"+rect2.width+"\t"+rect2.height+"\t"+rect2.getArea()+"\t"+rect2.getPerimeter());
   }
 }
