@@ -10,7 +10,7 @@ The instructions for getting started are on Maven's website [https://maven.apach
 
 For this particular example, from the root directory of the project you'd run:
 
-`mvn -B archetype:generate -DgroupId=cisc3130 -DartifactId=maven-example`
+`mvn -B archetype:generate -DgroupId=myApp -DartifactId=maven-example`
 
 This would create the folder `maven-example` with maven's project structure within it and a `pom.xml` file.
 
@@ -85,6 +85,6 @@ When successfully built, it'll produce a jar file under the newly created `targe
 
 Should you have followed along with the example in this directory, you can type this in the command line once the jar is built:
 
-`java -cp target/words-1.0-jar-with-dependencies.jar cisc3130.WordCount Bohemian_Rhapsody.txt`
+`java -cp target/words-1.0-jar-with-dependencies.jar myApp.WordCount Bohemian_Rhapsody.txt`
 
-For each public Java class you can switch the app name portion, so for this example there's also a `App` java class, so you can run `java -cp target/words-1.0-jar-with-dependencies.jar cisc3130.App`
+For each public Java class you can switch the app name portion, so for this example there's also a `App` java class, so you can run `java -cp target/words-1.0-jar-with-dependencies.jar myApp.Cloud`
