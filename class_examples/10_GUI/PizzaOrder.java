@@ -11,13 +11,16 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
 import javafx.geometry.*;
-
+import java.text.NumberFormat;
 
 public class PizzaOrder extends Application {
   private RadioButton smallRB;
   private RadioButton mediumRB;
 	private RadioButton ToppingsRB;
   Label msg1;
+
+  //For currency formatting
+  NumberFormat currency = NumberFormat.getCurrencyInstance();
 
   @Override // Override the start method in the Application class
   public void start(Stage primaryStage) {
