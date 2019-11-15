@@ -94,8 +94,6 @@ public class PizzaOrder extends Application {
     // Finally, display
     primaryStage.setScene(scene); // Place the scene in the stage
     primaryStage.show(); // Display the stage
-
-
   }
 
   public void calculateButtonClicked(){
