@@ -4,3 +4,7 @@ NetBeans Installation links for JDK 11
 
 Eclipse Installation Links
 * https://medium.com/@ssaurel/create-your-first-javafx-8-application-with-eclipse-9f77375a24b3
+* https://www.eclipse.org/efxclipse/index.html
+
+JavaFX Tutorial
+* http://tutorials.jenkov.com/javafx/index.html
