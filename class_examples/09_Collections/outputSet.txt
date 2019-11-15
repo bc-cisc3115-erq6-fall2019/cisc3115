@@ -1,0 +1,2 @@
+Total lines in the input file = 63
+Total lines after processing = 50
