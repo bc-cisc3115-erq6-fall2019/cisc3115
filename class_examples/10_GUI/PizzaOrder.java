@@ -74,7 +74,7 @@ public class PizzaOrder extends Application {
 
     Button btn = new Button();
     btn.setText("Calculate");
-    // btn.setOnAction(event -> calculateButtonClicked());
+    btn.setOnAction(event -> calculateButtonClicked());
     // grid.add(box, 2, 3);
 
     HBox buttonBox = new HBox(15);
@@ -88,6 +88,7 @@ public class PizzaOrder extends Application {
 
 
   }
+
   public static void main(String[] args) {
     launch(args);
   }
