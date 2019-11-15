@@ -17,6 +17,7 @@ public class PizzaOrder extends Application {
   private RadioButton smallRB;
   private RadioButton mediumRB;
 	private RadioButton ToppingsRB;
+  Label msg1;
 
   @Override // Override the start method in the Application class
   public void start(Stage primaryStage) {
@@ -31,7 +32,7 @@ public class PizzaOrder extends Application {
 		grid.setVgap(10);
 
     // Create a scene and place it in the stage
-    Scene scene = new Scene(grid, 300, 300);
+    Scene scene = new Scene(grid, 300, 400);
     primaryStage.setTitle("Pizza Calculator"); // Set the stage title
 
     grid.add(new Label("Name: "), 0, 0);
@@ -50,7 +51,7 @@ public class PizzaOrder extends Application {
     box.setAlignment(Pos.BOTTOM_LEFT);
 		grid.add(box, 0, 2, 2, 1);
 
-    // Toppings Group 1
+    // Toppings Group 1 (Left)
     ToggleGroup toppings = new ToggleGroup();
     CheckBox olives = new CheckBox("Olives");
     CheckBox cheese = new CheckBox("Cheese");
@@ -59,7 +60,7 @@ public class PizzaOrder extends Application {
     olives.setSelected(true);
     VBox veggies = new VBox(15, olives, cheese, mushrooms, pineapple);
 
-    // Toppings Group 2
+    // Toppings Group 2 (Right)
     CheckBox sausage = new CheckBox("Sausage");
     CheckBox pepperoni = new CheckBox("Pepperoni");
     CheckBox meatballs = new CheckBox("Meatballs");
@@ -71,11 +72,16 @@ public class PizzaOrder extends Application {
     toppingsBox.setAlignment(Pos.BOTTOM_LEFT);
     grid.add(toppingsBox, 0, 3, 2, 4);
 
+    // Message to user
+    msg1 = new Label();
+		msg1.setWrapText(true);
+		msg1.setPrefWidth(300);
+		msg1.setWrapText(true);
+		grid.add(msg1, 0, 8, 2, 3);
 
     Button btn = new Button();
     btn.setText("Calculate");
     btn.setOnAction(event -> calculateButtonClicked());
-    // grid.add(box, 2, 3);
 
     HBox buttonBox = new HBox(15);
 		buttonBox.getChildren().add(btn);
@@ -88,6 +94,12 @@ public class PizzaOrder extends Application {
 
 
   }
+
+  public void calculateButtonClicked(){
+    // calculate stuff
+    msg1.setText("Hi");
+  }
+
 
   public static void main(String[] args) {
     launch(args);
