@@ -1,0 +1,33 @@
+## Lab Exercise 11/14/2019
+
+You’ll be building this Split Bill Calculator interface with JavaFX. You can work in small teams or individually on this task. Submit the link here: https://docs.google.com/forms/d/e/1FAIpQLSdgIVgu56J9oI_PZfXWVTN5zCvgi47myXm4VuXP7NpxKoZJSw/viewform 
+
+*Note: JavaFX comes with Java 8. Any newer versions of Java (9+) will require separate installation of JavaFX.*
+
+The fields to include in your GUI are (in any sensical order and layout): 
+* Bill = any whole or decimal number
+* Sales Tax = this figure will be converted to a percentage. 5 = 5%
+* Split = number of ways to split the bill.
+
+Final value = [Bill + (Bill * sales tax as %)] / Split 
+
+Buttons:
+* Calculate will calculate the total. Make sure you have exception handling built in. 
+* Clear will clear the text fields.
+* Exit will close the GUI applet.
+
+
+
+Example: with the fields filled in
+
+![Split Bill 01](SplitBill01.png)
+
+
+Error handling:
+
+![Split Bill 01](SplitBill02.png)
+
+
+
+
+
