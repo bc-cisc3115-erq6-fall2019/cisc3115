@@ -48,17 +48,28 @@ public class PizzaOrder extends Application {
 
     HBox box = new HBox(20, smallRB, mediumRB);
     box.setAlignment(Pos.BOTTOM_LEFT);
-		grid.add(box, 1, 3);
+		grid.add(box, 0, 2, 2, 1);
 
-    // Toppings
+    // Toppings Group 1
     ToggleGroup toppings = new ToggleGroup();
     CheckBox olives = new CheckBox("Olives");
-    CheckBox pepperoni = new CheckBox("Pepperoni");
+    CheckBox cheese = new CheckBox("Cheese");
     CheckBox mushrooms = new CheckBox("Mushrooms");
+    CheckBox pineapple = new CheckBox("Pineapple");
     olives.setSelected(true);
-    HBox toppingsBox = new HBox(15, olives, pepperoni, mushrooms);
+    VBox veggies = new VBox(15, olives, cheese, mushrooms, pineapple);
+
+    // Toppings Group 2
+    CheckBox sausage = new CheckBox("Sausage");
+    CheckBox pepperoni = new CheckBox("Pepperoni");
+    CheckBox meatballs = new CheckBox("Meatballs");
+    CheckBox ham = new CheckBox("Ham");
+    ham.setSelected(true);
+    VBox meats = new VBox(15, sausage, pepperoni, meatballs, ham);
+
+    HBox toppingsBox = new HBox(15, veggies, meats);
     toppingsBox.setAlignment(Pos.BOTTOM_LEFT);
-    grid.add(toppingsBox, 0, 7, 2, 1);
+    grid.add(toppingsBox, 0, 3, 2, 4);
 
 
     Button btn = new Button();
