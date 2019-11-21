@@ -52,8 +52,10 @@ public class PizzaOrder extends Application {
 
     HBox box = new HBox(20, smallRB, mediumRB);
     box.setAlignment(Pos.BOTTOM_LEFT);
-		grid.add(box, 0, 2, 2, 1);
+    grid.add(new Label("Size: "), 0, 2);
+		grid.add(box, 1, 2, 2, 1);
 
+    grid.add(new Label("Toppings: "), 0, 3);
     // Toppings Group 1 (Left)
     ToggleGroup toppings = new ToggleGroup();
     CheckBox olives = new CheckBox("Olives");
@@ -73,14 +75,21 @@ public class PizzaOrder extends Application {
 
     HBox toppingsBox = new HBox(15, veggies, meats);
     toppingsBox.setAlignment(Pos.BOTTOM_LEFT);
-    grid.add(toppingsBox, 0, 3, 2, 4);
+    grid.add(toppingsBox, 0, 4, 2, 4);
 
     // Message to user
     msg1 = new Label();
 		msg1.setWrapText(true);
 		msg1.setPrefWidth(300);
 		msg1.setWrapText(true);
-		grid.add(msg1, 0, 8, 2, 3);
+		grid.add(msg1, 0, 12, 2, 3);
+
+    grid.add(new Label("Spinner: "), 0, 8);
+    // Creates an integer spinner with 1 as min, 5 as max and 1 as initial value
+    Spinner<Integer> spinner1 = new Spinner<>(1, 10, 2);
+    // HBox box = new HBox(20, label, spinner1);
+    // box.setAlignment(Pos.BOTTOM_LEFT);
+    grid.add(spinner1, 1, 8, 2, 1);
 
     Button btn = new Button();
     btn.setText("Calculate");
@@ -89,7 +98,7 @@ public class PizzaOrder extends Application {
     HBox buttonBox = new HBox(15);
 		buttonBox.getChildren().add(btn);
     buttonBox.setAlignment(Pos.BOTTOM_RIGHT);
-		grid.add(buttonBox, 0, 8, 2, 1);
+		grid.add(buttonBox, 0, 10, 2, 1);
 
     // Finally, display
     primaryStage.setScene(scene); // Place the scene in the stage
